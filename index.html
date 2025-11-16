@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ravi Teja Sonu Chittaluri · Backend & Platform Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="orbital"></canvas>
+    <header class="site-header">
+      <nav class="nav">
+        <div class="logo">RTSC</div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-toggle__icon">☀️</span>
+        </button>
+      </nav>
+      <section class="hero" id="about">
+        <p class="eyebrow">Backend & Platform Engineering</p>
+        <h1>
+          Ravi Teja Sonu <br />
+          <span>Chittaluri</span>
+        </h1>
+        <p class="lead">
+          Backend-focused Software Engineer crafting resilient APIs, distributed
+          systems, and developer tooling that scales to millions of requests a
+          day. Obsessed with observability, platform stability, and moving fast
+          with confidence.
+        </p>
+        <div class="hero-highlight">
+          <article class="hero-highlight__card">
+            <span class="hero-highlight__icon" aria-hidden="true">⚡</span>
+            <div>
+              <p class="hero-highlight__label">Requests orchestrated daily</p>
+              <p class="hero-highlight__value">500K+</p>
+            </div>
+          </article>
+          <article class="hero-highlight__card">
+            <span class="hero-highlight__icon" aria-hidden="true">🚀</span>
+            <div>
+              <p class="hero-highlight__label">Deployments automated</p>
+              <p class="hero-highlight__value">150+/yr</p>
+            </div>
+          </article>
+          <article class="hero-highlight__card">
+            <span class="hero-highlight__icon" aria-hidden="true">📉</span>
+            <div>
+              <p class="hero-highlight__label">Latency reductions</p>
+              <p class="hero-highlight__value">30%+</p>
+            </div>
+          </article>
+        </div>
+        <div class="hero-cta">
+          <a class="btn primary" href="mailto:chittaluriraviteja@gmail.com"
+            >Start a conversation</a
+          >
+          <a
+            class="btn ghost"
+            href="./assets/RaviTejaSonu-Resume.pdf"
+            >View resume</a
+          >
+        </div>
+        <dl class="hero-meta">
+          <div>
+            <dt>Location</dt>
+            <dd>Hyderabad, IN</dd>
+          </div>
+          <div>
+            <dt>LinkedIn</dt>
+            <dd>
+              <a href="https://www.linkedin.com/in/ravitejasonu2202" target="_blank"
+                >@ravitejasonu2202</a
+              >
+            </dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+917093697091">+91 70936 97091</a></dd>
+          </div>
+        </dl>
+        <div class="scroll-indicator" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="scroll-indicator__wheel"></div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="panel" id="experience">
+        <div class="panel__header">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="7" width="18" height="11" rx="2" />
+              <path d="M8 7V5h8v2" />
+              <path d="M3 12h18" />
+            </svg>
+          </span>
+          <div>
+            <p class="eyebrow">Impact</p>
+            <h2>Experience</h2>
+          </div>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item">
+            <div class="timeline__marker"></div>
+            <header>
+              <p class="timeline__company">ZMater Technologies</p>
+              <p class="timeline__role">Software Development Engineer</p>
+              <p class="timeline__date">Oct 2024 – Present</p>
+            </header>
+            <ul>
+              <li>
+                Designed polyglot REST APIs (Java, Go, Python, Node.js) serving
+                500K+ daily requests with automated quality gates.
+              </li>
+              <li>
+                Lifted data retrieval throughput by 30% through PostgreSQL query
+                tuning and indexing strategy.
+              </li>
+              <li>
+                Automated backend workflows, cutting manual toil by 40% and
+                adding resilient error handling plus JWT auth.
+              </li>
+              <li>
+                Built Jenkins-driven CI/CD with deep logging, boosting release
+                confidence and MTTR.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__marker"></div>
+            <header>
+              <p class="timeline__company">Cyber_ekta</p>
+              <p class="timeline__role">Software Development Engineer Intern</p>
+              <p class="timeline__date">Mar 2023 – Jul 2023</p>
+            </header>
+            <ul>
+              <li>
+                Automated Python + SQL pipelines for distributed data
+                processing, cutting reporting time by 30%.
+              </li>
+              <li>
+                Built Power BI intelligence dashboards with near real-time
+                insights for leadership.
+              </li>
+              <li>
+                Hardened data quality with validation suites tracking accuracy
+                and completeness.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="projects">
+        <div class="panel__header">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="7" height="7" rx="1.5" />
+              <rect x="14" y="3" width="7" height="7" rx="1.5" />
+              <rect x="3" y="14" width="7" height="7" rx="1.5" />
+              <rect x="14" y="14" width="7" height="7" rx="1.5" />
+            </svg>
+          </span>
+          <div>
+            <p class="eyebrow">Selected Work</p>
+            <h2>Projects</h2>
+          </div>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <p class="project-card__tag">Computer Vision · Distributed Systems</p>
+            <h3>License Plate Recognition System</h3>
+            <p>
+              End-to-end LPR service leveraging YOLOv7 + CRNN with Urdu OCR,
+              orchestrated with Python, Go, Java microservices for real-time
+              ingestion.
+            </p>
+            <ul>
+              <li>+15% recognition accuracy via dataset fine-tuning.</li>
+              <li>OpenCV + EasyOCR backend with streaming-friendly design.</li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn ghost" href="#" aria-label="View LPR case study">Case study</a>
+              <a class="btn outline" href="#" aria-label="View LPR codebase">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-card__tag">Full Stack · Cloud Native</p>
+            <h3>E-Commerce Platform</h3>
+            <p>
+              React + Django stack with secure JWT auth, product lifecycle, and
+              observability baked in from day zero.
+            </p>
+            <ul>
+              <li>PostgreSQL persistence with Prisma-style schemas.</li>
+              <li>AWS deployment via Jenkins/GitHub Actions; 25% faster APIs.</li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn ghost" href="#">Live demo</a>
+              <a class="btn outline" href="#">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-card__tag">Gamification · Unreal Engine</p>
+            <h3>Parliamentary Insight</h3>
+            <p>
+              Unreal Engine 5 experience demystifying Indian parliament through
+              elections, rescue ops, and quizzes.
+            </p>
+            <ul>
+              <li>Hybrid C++ and Blueprints gameplay with Blender assets.</li>
+              <li>Accessibility-first interaction loops for students.</li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn ghost" href="#">Gameplay reel</a>
+              <a class="btn outline" href="#">Design doc</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-card__tag">Product Engineering</p>
+            <h3>Airbnb Clone</h3>
+            <p>
+              MERN implementation mirroring booking flows, host dashboards, and
+              secure payments.
+            </p>
+            <ul>
+              <li>GraphQL gateway for search & booking aggregation.</li>
+              <li>Optimistic UI updates keep UX silky smooth.</li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn ghost" href="#">Product tour</a>
+              <a class="btn outline" href="#">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel--two-column" id="skills">
+        <div>
+          <div class="panel__header">
+            <span class="section-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="8" cy="8" r="3" />
+                <circle cx="16" cy="16" r="3" />
+                <path d="M9.5 9.5 14.5 14.5" />
+                <path d="M4 16h4v4H4z" />
+                <path d="M16 4h4v4h-4z" />
+              </svg>
+            </span>
+            <div>
+              <p class="eyebrow">Stack</p>
+              <h2>Skills</h2>
+            </div>
+          </div>
+          <div class="skill-pills">
+            <div>
+              <h3>Languages</h3>
+              <p>Java, Go, Python, Node.js, C++, C#</p>
+            </div>
+            <div>
+              <h3>Backend & APIs</h3>
+              <p>Django, Flask, ASP.NET MVC, REST, GraphQL</p>
+            </div>
+            <div>
+              <h3>Databases</h3>
+              <p>PostgreSQL, MongoDB, Prisma</p>
+            </div>
+            <div>
+              <h3>Cloud & DevOps</h3>
+              <p>AWS, Docker, Terraform, Jenkins, CI/CD</p>
+            </div>
+            <div>
+              <h3>Analytics</h3>
+              <p>SQL, Power BI, Data Visualization</p>
+            </div>
+            <div>
+              <h3>Practices</h3>
+              <p>Agile, SDLC, OOD, DSA, Observability</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="panel__header">
+            <p class="eyebrow">Highlights</p>
+            <h2>Certifications & Communities</h2>
+          </div>
+          <ul class="cert-list">
+            <li>AWS Academy Data Analytics & Cloud Foundations</li>
+            <li>Certified Smart Coder by Smart Interviews</li>
+            <li>GCP Cloud Architect (In Progress)</li>
+            <li>Java Backend Developer Path · Coursera</li>
+            <li>MongoDB Node.js Developer Path</li>
+            <li>Kubernetes Administrator Training</li>
+            <li>HackerRank Software Engineer Certificate</li>
+            <li>University Coding Club · NSS · Life Foundation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="achievements">
+        <div class="panel__header">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3 5 6v6c0 5 3.5 9 7 9s7-4 7-9V6l-7-3Z" />
+              <path d="M9 10a3 3 0 1 0 6 0" />
+            </svg>
+          </span>
+          <div>
+            <p class="eyebrow">Proof</p>
+            <h2>Achievements</h2>
+          </div>
+        </div>
+        <div class="achievements">
+          <article>
+            <h3>Top 500 · GeeksForGeeks Hackathon</h3>
+            <p>
+              Ranked 486 globally for a multi-round challenge measuring systems
+              design, algorithms, and communication under pressure.
+            </p>
+          </article>
+          <article>
+            <h3>Top 10% · LeetCode</h3>
+            <p>
+              Demonstrated depth across dynamic programming, graph theory, and
+              data structures with rapid iteration cycles.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel now-panel" id="now">
+        <div class="panel__header">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 6v7l4 2" />
+              <circle cx="12" cy="12" r="9" />
+            </svg>
+          </span>
+          <div>
+            <p class="eyebrow">Real-time</p>
+            <h2>Now / Next</h2>
+          </div>
+        </div>
+        <div class="now-grid">
+          <article>
+            <p class="now-label">Now</p>
+            <p class="now-value">Scaling developer platform at ZMater</p>
+            <p class="now-meta">Optimizing CI/CD, resiliency playbooks, and observability rollouts.</p>
+          </article>
+          <article>
+            <p class="now-label">Learning</p>
+            <p class="now-value">GCP Cloud Architect · K8s Operator patterns</p>
+            <p class="now-meta">Deep-diving into multi-cloud infra-as-code and policy automation.</p>
+          </article>
+          <article>
+            <p class="now-label">Open to</p>
+            <p class="now-value">Backend & Platform roles</p>
+            <p class="now-meta">Rapid APIs, distributed systems, developer productivity initiatives.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="contact">
+        <div class="panel__header">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="m4 4 8 6 8-6" />
+              <rect x="4" y="4" width="16" height="16" rx="2" />
+            </svg>
+          </span>
+          <div>
+            <p class="eyebrow">Let’s build</p>
+            <h2>Contact</h2>
+          </div>
+        </div>
+        <div class="contact-card">
+          <p>
+            Ready to create scalable backend platforms, developer tools, or
+            cloud automation pipelines that unlock speed & reliability. Drop a
+            line and let's architect the next chapter together.
+          </p>
+          <div class="contact-actions">
+            <a class="btn primary" href="mailto:chittaluriraviteja@gmail.com"
+              >Email Ravi Teja</a
+            >
+            <a class="btn ghost" href="tel:+917093697091">Call directly</a>
+            <a
+              class="btn outline"
+              href="https://www.linkedin.com/in/ravitejasonu2202"
+              target="_blank"
+              >Connect on LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p class="copyright">
+        © <span id="year"></span> Ravi Teja Sonu Chittaluri. Crafted with intent.
+      </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
