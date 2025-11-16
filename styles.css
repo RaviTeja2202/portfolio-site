@@ -737,6 +737,7 @@ html[data-theme='light'] .case-header {
   font-family: 'Space Grotesk', monospace;
   font-size: 0.85rem;
   overflow-x: auto;
+  white-space: pre;
 }
 
 html[data-theme='light'] .journal-grid pre {
