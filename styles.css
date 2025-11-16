@@ -42,6 +42,33 @@ body {
   transition: background 0.6s ease, color 0.6s ease;
 }
 
+body,
+canvas#orbital,
+.nav,
+.nav a,
+.hero::after,
+.hero-terminal,
+.hero-highlight__card,
+.signal-cards article,
+.stack-grid article,
+.project-card,
+.case-card,
+.journal-grid article,
+.contact-card,
+.contact-form input,
+.contact-form textarea,
+.stack-filter .filter-btn,
+.grid-overlay,
+.site-header,
+.panel,
+.section-icon,
+.btn,
+.btn::after {
+  transition: background 0.45s ease, border-color 0.45s ease,
+    color 0.45s ease, box-shadow 0.45s ease, fill 0.45s ease,
+    stroke 0.45s ease;
+}
+
 canvas#orbital {
   position: fixed;
   inset: 0;
@@ -72,6 +99,7 @@ body::after {
   z-index: -1;
   opacity: 0.8;
   pointer-events: none;
+  transition: background 0.6s ease, opacity 0.6s ease;
 }
 
 main,
@@ -215,6 +243,12 @@ h1 span {
   isolation: isolate;
 }
 
+html[data-theme='light'] .hero-highlight__card,
+html[data-theme='light'] .signal-cards article {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(13, 27, 42, 0.12);
+}
+
 .hero-highlight__card::after {
   content: '';
   position: absolute;
@@ -249,6 +283,54 @@ h1 span {
   font-size: 1.3rem;
   font-weight: 600;
   margin: 0.1rem 0 0;
+}
+
+.hero-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.hero-terminal {
+  border: 1px dashed var(--border);
+  border-radius: 20px;
+  padding: 1rem 1.2rem;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+html[data-theme='light'] .hero-terminal {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(13, 27, 42, 0.12);
+}
+
+.terminal-label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
+}
+
+.terminal-window {
+  font-family: 'Space Grotesk', monospace;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 14px;
+  padding: 1rem;
+  color: #8cffda;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme='light'] .terminal-window {
+  background: rgba(8, 23, 46, 0.08);
+  color: #076262;
+}
+
+.terminal-window pre {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
 }
 
 .hero-cta {
@@ -372,6 +454,7 @@ h1 span {
   background: var(--panel);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
 }
 
 .panel__header {
@@ -471,6 +554,24 @@ h1 span {
   overflow: hidden;
 }
 
+html[data-theme='light'] .project-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(13, 27, 42, 0.12);
+}
+
+.stack-grid article,
+.case-card,
+.journal-grid article,
+.contact-card,
+.hero-terminal,
+.hero-highlight__card,
+.signal-cards article,
+.project-card,
+.stack-grid article * {
+  transition: background 0.45s ease, border-color 0.45s ease,
+    color 0.45s ease;
+}
+
 .project-card::before {
   content: '';
   position: absolute;
@@ -536,6 +637,109 @@ h1 span {
   gap: 0.75rem;
 }
 
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.case-card {
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+}
+
+.case-header {
+  padding: 1.2rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+html[data-theme='light'] .case-header {
+  border-color: rgba(13, 27, 42, 0.1);
+}
+
+.case-header p {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.case-header svg {
+  width: 110px;
+  height: 50px;
+}
+
+.case-header polyline {
+  fill: none;
+  stroke: var(--accent-strong);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 10px);
+  grid-auto-rows: 10px;
+  gap: 4px;
+}
+
+.badge-grid span {
+  background: rgba(140, 255, 218, 0.4);
+  border-radius: 2px;
+}
+
+.case-body {
+  padding: 1.5rem;
+}
+
+.case-body ul {
+  margin: 0.8rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.journal-grid article {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.journal-label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
+  font-size: 0.75rem;
+}
+
+.journal-grid pre {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 1rem;
+  border-radius: 14px;
+  color: var(--accent);
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.85rem;
+}
+
+html[data-theme='light'] .journal-grid pre {
+  background: rgba(13, 27, 42, 0.08);
+  color: #076262;
+}
+
 .panel--two-column {
   display: grid;
   gap: 2rem;
@@ -554,13 +758,19 @@ h1 span {
   background: rgba(255, 255, 255, 0.02);
 }
 
-.cert-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.credential-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.75rem;
-  color: var(--muted);
+}
+
+.credential-grid span {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .now-panel .now-grid {
@@ -624,6 +834,60 @@ h1 span {
   gap: 1rem;
 }
 
+.contact-form {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-form label {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.8rem 1rem;
+  color: var(--text);
+  font-family: inherit;
+}
+
+html[data-theme='light'] .contact-form input,
+html[data-theme='light'] .contact-form textarea {
+  background: rgba(13, 27, 42, 0.05);
+  border-color: rgba(13, 27, 42, 0.15);
+  color: #0d1b2a;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: transparent;
+}
+
+.form-status {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
 .copyright {
   text-align: center;
   color: var(--muted);
@@ -664,4 +928,95 @@ h1 span {
   .timeline__marker {
     left: -8px;
   }
+}
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.stack-grid article {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.stack-label {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.stack-value {
+  margin: 0.4rem 0 0;
+  font-weight: 600;
+}
+
+.stack-note {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.stack-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #04110c;
+  box-shadow: 0 10px 20px rgba(12, 202, 171, 0.25);
+}
+
+.project-card.hidden {
+  opacity: 0.2;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+
+.stack-grid article,
+.case-card,
+.journal-grid article,
+.contact-card {
+  transition: background 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+html[data-theme='light'] .stack-grid article,
+html[data-theme='light'] .case-card,
+html[data-theme='light'] .journal-grid article,
+html[data-theme='light'] .contact-card {
+  background: rgba(255, 255, 255, 0.97);
+  border-color: rgba(13, 27, 42, 0.12);
+}
+
+html[data-theme='light'] .panel {
+  background: rgba(255, 255, 255, 0.97);
+  border-color: rgba(13, 27, 42, 0.08);
+  box-shadow: 0 35px 60px rgba(11, 21, 34, 0.08);
+}
+
+html[data-theme='light'] .stack-note,
+html[data-theme='light'] .case-body,
+html[data-theme='light'] .case-body ul,
+html[data-theme='light'] .journal-label {
+  color: rgba(13, 27, 42, 0.7);
 }

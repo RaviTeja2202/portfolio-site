@@ -99,3 +99,38 @@ const yearEl = document.getElementById('year');
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.project-card');
+
+function applyFilter(button) {
+  filterButtons.forEach((btn) => btn.classList.toggle('active', btn === button));
+  const filter = button.dataset.filter;
+  cards.forEach((card) => {
+    const match = filter === 'all' || card.dataset.category === filter;
+    card.classList.toggle('hidden', !match);
+  });
+}
+
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(button));
+});
+
+if (filterButtons.length) {
+  applyFilter(filterButtons[0]);
+}
+
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const status = contactForm.querySelector('.form-status');
+    if (status) {
+      status.textContent = 'Thanks! I will respond shortly.';
+    }
+    contactForm.reset();
+    setTimeout(() => {
+      if (status) status.textContent = '';
+    }, 5000);
+  });
+}
