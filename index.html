@@ -577,7 +577,15 @@ $ curl /healthz
             >
             <a class="btn outline" href="tel:+917093697091">Call directly</a>
           </div>
-          <form class="contact-form" aria-label="Send a build brief">
+          <form
+            class="contact-form"
+            aria-label="Send a build brief"
+            action="https://formsubmit.co/chittaluriraviteja@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New project overview from RTSC site" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
             <div class="form-row">
               <div class="form-group">
                 <label for="contact-name">Name</label>
